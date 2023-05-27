@@ -1,22 +1,21 @@
-/** @type { import('@storybook/react').Preview } */
 import React from "react";
-import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from 'styled-components';
+import { addDecorator, addParameters } from "@storybook/react";
+import { ThemeProvider } from "styled-components";
 import theme from "../src/theme";
-const preview = {
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
+
+// import "story.css";
+
+export const decorators = [
+  (Story) => (
+    <ThemeProvider theme={theme}>
+      <Story />
+    </ThemeProvider>
+  ),
+];
+
+export const parameters = {
+  options: {
+    showRoots: true,
   },
 };
 
-addDecorator((storyFn) => {
-  <ThemeProvider theme={theme}>{storyFn}</ThemeProvider>
-})
-
-export default preview;
