@@ -3,7 +3,7 @@ import { addDecorator, addParameters } from "@storybook/react";
 import { ThemeProvider } from "styled-components";
 import theme from "../src/theme";
 
-// import "story.css";
+import "story.css";
 
 export const decorators = [
   (Story) => (
@@ -18,4 +18,3 @@ export const parameters = {
     showRoots: true,
   },
 };
-
