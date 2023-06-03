@@ -4,7 +4,7 @@ import StyledText from './style';
 
 function Text({children, type="primary", size="normal", bold, ...rest}) {
   return (
-    <StyledText type="primary" size="normal" bold {...rest}>
+    <StyledText type={type} size={size} bold {...rest}>
       {children}
     </StyledText>
   )
