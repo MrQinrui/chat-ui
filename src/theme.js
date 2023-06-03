@@ -10,7 +10,13 @@ const theme = {
   grayDark: '#181C2F',
 
   normal: '1.4rem',
-  midium: '1.6rem',
+  medium: '1.6rem',
+  large: '1.8rem',
+  xlarge: '2rem',
+  xxlarge: '2.4rem',
+  small: '1.2rem',
+  xsmall: '1rem',
+  xxsmall: '0.8rem',
 } 
 
 export default theme;
