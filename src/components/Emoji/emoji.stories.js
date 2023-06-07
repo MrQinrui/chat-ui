@@ -3,14 +3,14 @@ import Emoji from ".";
 
 export default {
   title: "UI 组件/Emoji",
-  component: Emoji
+  component: Emoji,
 };
 
-
+/* eslint-disable jsx-a11y/accessible-emoji */
 export const Default = () => (
   <div>
-    <Emoji label="smile">😀</Emoji>
-    <Emoji label="cry">😭</Emoji>
-    <Emoji label="thumbsup">👍</Emoji>
+    <Emoji label="smile">😄</Emoji>
+    <Emoji label="todo">✅</Emoji>
+    <Emoji label="clock">🕔</Emoji>
   </div>
 );

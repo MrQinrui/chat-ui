@@ -1,6 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import StyledIcon from './style'
+import React from "react";
+import PropTypes from "prop-types";
+import StyledIcon from "./style";
+import SocialIcon from "./SocialIcon";
 
 function Icon({
   icon: IconComponent,
@@ -10,17 +11,21 @@ function Icon({
   opacity,
   ...rest
 }) {
-  return <StyledIcon color={color} opacity={opacity} {...rest}>
-    {IconComponent && <IconComponent width={width} height={height} />}
-  </StyledIcon>
+  return (
+    <StyledIcon color={color} opacity={opacity} {...rest}>
+      {IconComponent && <IconComponent width={width} height={height} />}
+    </StyledIcon>
+  );
 }
+
+Icon.Social = SocialIcon;
 
 Icon.propTypes = {
   icon: PropTypes.element,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   color: PropTypes.string,
-  opacity: PropTypes.number
-}
+  opacity: PropTypes.number,
+};
 
-export default Icon
+export default Icon;

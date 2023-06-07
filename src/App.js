@@ -1,13 +1,16 @@
-import './App.css';
-import Button from './Button';
-import useColorChange from './UseColorChange';
+import React from "react";
+import ChatApp from "components/ChatApp";
+import { ThemeProvider } from "styled-components";
+import theme from "theme";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const [color, handleButton1Click] = useColorChange()
-  const [color2,handleButton2Click] = useColorChange("#0000ff", "f0f")
   return (
-    <div className="App">
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <ChatApp />
+      </ThemeProvider>
+    </Router>
   );
 }
 

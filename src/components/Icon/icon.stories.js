@@ -1,28 +1,44 @@
 import React from "react";
 import Icon from ".";
-import { ReactComponent as SmileIcon } from 'assets/icons/smile.svg'
-import { faCommentDots } from "@fortawesome/free-regular-svg-icons";
+
+import {
+  faCommentDots,
+  faFolder,
+  faStickyNote,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { ReactComponent as SmileIcon } from "assets/icons/smile.svg";
+
 export default {
-  title: "UI 组件/Icon",
-  component: Icon
+  title: "UI组件/Icon",
+  component: Icon,
 };
 
 export const Default = () => <Icon icon={SmileIcon} />;
 
-export const CustomColor = () => <Icon icon={SmileIcon} color="#cccccc" />;
+export const CustomColor = () => {
+  return <Icon icon={SmileIcon} color="#cccccc" />;
+};
 
-export const CustomSize = () => <Icon icon={SmileIcon} width={48} height={48} color="#cccccc" />;
+export const CustomSize = () => {
+  return <Icon icon={SmileIcon} width={48} height={48} color="#cccccc" />;
+};
 
-export const FontAwesome = () => <FontAwesomeIcon icon={faCommentDots}></FontAwesomeIcon>;
+export const FontAwesome = () => {
+  return <FontAwesomeIcon icon={faCommentDots} />;
+};
 
-export const FontAwesomeColor = () => <FontAwesomeIcon icon={faCommentDots} style={{ color: "#ccc" }}></FontAwesomeIcon>;
+export const FontAwesomeColor = () => {
+  return <FontAwesomeIcon icon={faCommentDots} style={{ color: "#cccccc" }} />;
+};
 
-export const FontAwesomeSize = () => {
-  return <div>
-    <FontAwesomeIcon icon={faCommentDots} style={{ fontSize: "24px" }}></FontAwesomeIcon>
-    <FontAwesomeIcon icon={faCommentDots} style={{ fontSize: "36px" }}></FontAwesomeIcon>
-    <FontAwesomeIcon icon={faCommentDots} style={{ fontSize: "48px" }}></FontAwesomeIcon>
-  </div>
-}
+export const FontAwesomeSizes = () => {
+  return (
+    <div>
+      <FontAwesomeIcon icon={faFolder} style={{ fontSize: "24px" }} />
+      <FontAwesomeIcon icon={faStickyNote} style={{ fontSize: "36px" }} />
+      <FontAwesomeIcon icon={faCommentDots} style={{ fontSize: "48px" }} />
+    </div>
+  );
+};

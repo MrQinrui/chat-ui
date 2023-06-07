@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import StyledButton from './style'
+import React from "react";
+import PropTypes from "prop-types";
+import StyledButton from "./style";
 
 function Button({
   children,
-  type = 'primary',
-  shape = 'circle',
-  size = '30px',
+  type = "primary",
+  shape = "circle",
+  size = "30px",
   bgColor,
   ...rest
 }) {
@@ -20,14 +20,14 @@ function Button({
     >
       {children}
     </StyledButton>
-  )
+  );
 }
 
 Button.propTypes = {
   children: PropTypes.any,
-  type: PropTypes.oneOf(['primary']),
-  shape: PropTypes.oneOf(['circle', 'rect']),
+  type: PropTypes.oneOf(["primary"]),
+  shape: PropTypes.oneOf(["circle", "rect"]),
   size: PropTypes.string,
-}
+};
 
-export default Button
+export default Button;

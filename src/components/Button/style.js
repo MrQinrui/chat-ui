@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from "styled-components";
 
 const shapeVariants = {
   circle: css`
@@ -9,41 +9,35 @@ const shapeVariants = {
     align-items: center;
     justify-content: center;
   `,
-
   rect: css`
     padding: 12px 18px;
     border-radius: 6px;
-  `
-}
+  `,
+};
 
-const TypeVariants = {
+const typeVariants = {
   primary: css`
     background-color: ${({ theme }) => theme.primaryColor};
     color: white;
   `,
-
-  secondary: css`
-    background-color: ${({ theme }) => theme.gray3};
-    color: ${({ theme }) => theme.grayDark}; 
-  `,
-
-  danger: css` 
-    background-color: ${({ theme }) => theme.red};
-    color: white;
-  `
-}
+};
 
 const StyledButton = styled.button`
   border: none;
-  ${({ shape }) => shapeVariants[shape]};
-  ${({ type }) => TypeVariants[type]};
-  
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  ${({ shape }) => shapeVariants[shape]}
+  ${({ type }) => typeVariants[type]}
+  ${({ bgColor }) => `background-color: ${bgColor}`};
+
   transform: scale(1);
   transition: 0.4s;
   &:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
   }
+
 `;
 
-export default StyledButton
+export default StyledButton;

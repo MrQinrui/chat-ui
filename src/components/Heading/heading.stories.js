@@ -3,7 +3,7 @@ import Heading from ".";
 
 export default {
   title: "排版/Heading",
-  component: Heading
+  component: Heading,
 };
 
 export const H1 = () => <Heading level={1}>这是标题</Heading>;

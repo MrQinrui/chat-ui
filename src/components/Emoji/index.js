@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import StyledEmoji from './style';
+import React from "react";
+import PropTypes from "prop-types";
+import StyledEmoji from "./style";
 
-function Emoji({children, label, ...rest}) {
+function Emoji({ children, label, ...rest }) {
   return (
     <StyledEmoji role="img" aria-label={label} {...rest}>
       {children}
     </StyledEmoji>
-  )
+  );
 }
 
 Emoji.propTypes = {
   children: PropTypes.any,
-  label: PropTypes.string
-}
+  label: PropTypes.string,
+};
 
-export default Emoji
+export default Emoji;

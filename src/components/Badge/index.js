@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import StyledBadge, { Count } from './style'
+import React from "react";
+import PropTypes from "prop-types";
+import StyledBadge, { Count } from "./style";
 
 function Badge({
   children,
@@ -9,14 +9,24 @@ function Badge({
   showZero = false,
   ...rest
 }) {
-  return <StyledBadge variant={children ? 'dot' : 'default'} show={show} count={count} showZero={showZero} {...rest}>{children || <Count>{ count }</Count>}</StyledBadge>
+  return (
+    <StyledBadge
+      variant={children ? "dot" : "default"}
+      show={show}
+      count={count}
+      showZero={showZero}
+      {...rest}
+    >
+      {children || <Count>{count}</Count>}
+    </StyledBadge>
+  );
 }
 
 Badge.propTypes = {
-  children: PropTypes.any,
   show: PropTypes.bool,
+  count: PropTypes.number,
   showZero: PropTypes.bool,
-  count: PropTypes.number
-}
+  children: PropTypes.any,
+};
 
-export default Badge
+export default Badge;

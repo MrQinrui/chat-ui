@@ -1,5 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const StyledOption = styled.option``;
 
-export default StyledOption
+export default StyledOption;

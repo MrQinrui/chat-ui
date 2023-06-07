@@ -1,13 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import StyledText from './style';
+import React from "react";
+import PropTypes from "prop-types";
+import StyledText from "./style";
 
-function Text({children, type="primary", size="normal", bold, ...rest}) {
+function Text({ children, type = "primary", size = "normal", bold, ...rest }) {
   return (
-    <StyledText type={type} size={size} bold {...rest}>
+    <StyledText type={type} size={size} bold={bold} {...rest}>
       {children}
     </StyledText>
-  )
+  );
 }
 
 Text.propTypes = {
@@ -23,6 +23,7 @@ Text.propTypes = {
     "xlarge",
     "xxlarge",
   ]),
-}
+  bold: PropTypes.bool,
+};
 
-export default Text
+export default Text;
